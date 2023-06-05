@@ -6,11 +6,11 @@ Everything has been tested locally and works perfectly.
 
 Have a pleasant day and see you very soon!
 
-![Admin list](https://github.com/White-App/chalhoubCaseStudy/blob/origin/admin-index.png?raw=true)
+![Admin list](https://github.com/White-App/chalhoubCaseStudy/blob/master/admin-index.png?raw=true)
 
-![Admin edit](https://github.com/White-App/chalhoubCaseStudy/blob/origin/admin-edit.png?raw=true)
+![Admin edit](https://github.com/White-App/chalhoubCaseStudy/blob/master/admin-edit.png)
 
-![Front list direction](https://github.com/White-App/chalhoubCaseStudy/blob/origin/front-show.png?raw=true)
+![Front list direction](https://github.com/White-App/chalhoubCaseStudy/blob/master/front-show.png?raw=true)
 
 ## Setting Up The Magento Docker Environment
 
@@ -22,7 +22,7 @@ If not, please follow the official Docker installation instructions : [Docker en
 
 Clone the repository:
 
-`git clone <repository_url>`
+`git clone git@github.com:White-App/chalhoubCaseStudy.git`
 
 ### Step 2: Add Entry to Hosts File
 
