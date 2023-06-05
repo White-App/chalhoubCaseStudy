@@ -91,14 +91,7 @@ This means that even if you stop the Docker containers, your data will still be 
 
 
 
-### To run the PHPUnit tests, you'll need to configure PHPUnit in your Magento installation. You can follow these steps:
+### To run the PHPUnit tests, you'll need to configure PHPUnit in your Magento installation. 
 
-Install PHPUnit globally or locally within your project using Composer.
-Create a phpunit.xml configuration file in the root directory of your Magento installation. Define the necessary settings, such as the bootstrap file and the test suite.
-Run the PHPUnit command from the root directory of your Magento installation:
-`phpunit`
-This command will execute all the tests defined in your test suite and display the results.
-
-Please note that the provided example test cases are just templates, and you will need to adapt them to your module's specific implementation, dependencies, and test requirements.
-
+Please note that I didn't have time to finalize them you will find my tests here : dev/tests/shopfinder
 
