@@ -82,15 +82,68 @@ In the left navbar, you'll find a new tab "WhiteApp". Click on it and then on "S
 You'll be redirected to the shop settings to activate the shopfinder module, add a google maps API Key 
 and choose how max store you want to show.
 
-Then you'll be able to list / add / edit stores in "WhiteApp" > "ShopFinder" 
+Then you'll be able to list / add / edit stores in "WhiteApp" > "ShopFinder"
 
-# Note: Persistent MySQL Data
-Thanks to the configuration in the Docker Compose file, MySQL data is persisted in a Docker volume. 
+### About GraphQL API
+Here is some query example you can execute :
+
+    query {
+        getShops {
+            identifier
+            title
+            country
+            image
+            address
+            is_active
+            latitude
+            longitude
+        }
+    }
+
+    query {
+        getShopByIdentifier(identifier: "647de12095599") {
+            identifier
+            title
+            country
+            image
+            address
+            is_active
+            latitude
+            longitude
+        }
+    }
+
+    query {
+        getNearbyShops(latitude: 12, longitude: 3, radius: 20) {
+            identifier
+            title
+            country
+            image
+            address
+            is_active
+            latitude
+            longitude
+        }
+    }
+
+    mutation {
+        deleteShop(shopfinder_id: 1) {
+            success
+            message
+        }
+    }
+
+
+
+
+
+### Note: Persistent MySQL Data
+Thanks to the configuration in the Docker Compose file, MySQL data is persisted in a Docker volume.
 This means that even if you stop the Docker containers, your data will still be there when you start them again.
 
 
 
-### To run the PHPUnit tests, you'll need to configure PHPUnit in your Magento installation. 
-
+### To run the PHPUnit tests 
+You'll need to configure PHPUnit in your Magento installation.
 Please note that I didn't have time to finalize them you will find my tests here : dev/tests/shopfinder
 
