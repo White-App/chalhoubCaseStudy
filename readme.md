@@ -46,16 +46,19 @@ Navigate to the directory where the docker-compose.yml file is located and spin 
 
 `docker-compose exec app composer install`
 
-docker-compose exec app php bin/magento setup:install \
---db-host=db --db-name=magento --db-user=magento --db-password=magento \
---base-url=http://magento2.local --backend-frontname=admin \
---admin-firstname=admin --admin-lastname=admin --admin-email=bouarfamus@gmail.com \
---admin-user=admin --admin-password=admin123 --language=en_US \
---currency=USD --timezone=America/Chicago --use-rewrites=1 \
---elasticsearch-host=elasticsearch \
---elasticsearch-port=9200 \
---elasticsearch-username=admin \
---elasticsearch-password=magento
+```
+   docker-compose exec app php bin/magento setup:install \ 
+--db-host=db --db-name=magento --db-user=magento --db-password=magento \ 
+--base-url=http://magento2.local --backend-frontname=admin \ 
+--admin-firstname=admin --admin-lastname=admin --admin-email=bouarfamus@gmail.com \ 
+--admin-user=admin --admin-password=admin123 --language=en_US \ 
+--currency=USD --timezone=America/Chicago --use-rewrites=1 \ 
+--elasticsearch-host=elasticsearch \ 
+--elasticsearch-port=9200 \ 
+--elasticsearch-username=admin \ 
+--elasticsearch-password=magento 
+```
+    
 The -d option is used to run the containers in detached mode (in the background).
 
 ### Step 5: Verify Installation
